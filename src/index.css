@@ -2,4 +2,6 @@
 
 body {
   font-family: barlow, sans-serif;
+  background: rgb(24, 24, 24);
+  color: white;
 }
