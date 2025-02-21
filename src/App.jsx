@@ -4,6 +4,7 @@ import "./index.css";
 import SharedLayout from "./layouts/SharedLayout";
 import Home from "./pages/Home";
 import Login from "./auth/Login";
+import Register from "./auth/Register";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
       },
       {
         path: "/login",

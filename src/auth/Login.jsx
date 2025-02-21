@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
 import { AuthContext } from "../context/AuthContext";
+import { loginSchema } from "./auth.schema";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -31,18 +32,20 @@ function Login() {
       setIsAuthenticated(true);
     },
     onError: (error) => {
-      setError(error.response.data.message || "Une erreur est survenue");
+      setError(error.response.data.message || "Identifiants invalides");
     },
   });
 
   const submitForm = async (e) => {
     e.preventDefault();
 
-    if (!email || !password) {
-      return setError("Veuillez remplir tous les champs");
-    }
+    const result = loginSchema.safeParse({ email, password });
 
-    mutation.mutate();
+    if (!result.success) {
+      setError(result.error.errors[0].message);
+    } else {
+      mutation.mutate();
+    }
   };
 
   return (
@@ -61,7 +64,7 @@ function Login() {
           onChange={handleChangePassword}
         />
         {error && <p>{error}</p>}
-        <button type="submit">connexion</button>
+        <button type="submit">Connexion</button>
       </form>
     </div>
   );
