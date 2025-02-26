@@ -1,7 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  /* primary color */
+  --clr-primary-50: "#e8e4ff";
+  --clr-primary-100: "#d8cfff";
+  --clr-primary-200: "#baa8ff";
+  --clr-primary-300: "#9574ff";
+  --clr-primary-400: "#823eff";
+  --clr-primary-500: "#7c13ff";
+  --clr-primary-600: "#7800ff";
+  --clr-primary-700: "#7800ff";
+  --clr-primary-800: "#6b00e4";
+  --clr-primary-900: "#5900b0";
+  --clr-primary-950: "#08000f";
+
+  /* background color */
+  --bg-color: #0b0f19;
+
+  /* nuance */
+  --clr-black: #000000;
+  --clr-white: #ffffff;
+
+  /* font family */
+  --ff-barlow: "Outfit";
+
+  /* transition */
+  --transition-02: all 0.2s ease-in-out;
+  --transition-04: all 0.4s ease-in-out;
+}
+
 body {
   font-family: barlow, sans-serif;
-  background: rgb(24, 24, 24);
+  background: var(--bg-color);
   color: white;
 }
