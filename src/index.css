@@ -2,17 +2,17 @@
 
 :root {
   /* primary color */
-  --clr-primary-50: "#e8e4ff";
-  --clr-primary-100: "#d8cfff";
-  --clr-primary-200: "#baa8ff";
-  --clr-primary-300: "#9574ff";
-  --clr-primary-400: "#823eff";
-  --clr-primary-500: "#7c13ff";
-  --clr-primary-600: "#7800ff";
-  --clr-primary-700: "#7800ff";
-  --clr-primary-800: "#6b00e4";
-  --clr-primary-900: "#5900b0";
-  --clr-primary-950: "#08000f";
+  --clr-primary-50: "#ebebff";
+  --clr-primary-100: "#dadaff";
+  --clr-primary-200: "#c0bdff";
+  --clr-primary-300: "#9e95ff";
+  --clr-primary-400: "#846bff";
+  --clr-primary-500: "#7648ff";
+  --clr-primary-600: "#6f28ff";
+  --clr-primary-700: "#621de5";
+  --clr-primary-800: "#4f1ab9";
+  --clr-primary-900: "#421e91";
+  --clr-primary-950: "#14092a";
 
   /* background color */
   --bg-color: #0b0f19;
