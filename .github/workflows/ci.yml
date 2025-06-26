@@ -1,11 +1,15 @@
-name: Exemple de Workflow CI
+name: CI Workflow
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Exécution d'un script simple
-      run: echo "Le workflow CI est déclenché par un push sur GitHub!"
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - run: npm install
+      - run: npm test
