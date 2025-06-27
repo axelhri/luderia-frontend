@@ -16,4 +16,4 @@ jobs:
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/luderia:$(date +%s) .
 
       - name: Push the image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/luderia:$(date +%s)
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/luderia
